@@ -15,7 +15,7 @@ namespace JessicaHenry_S00214115
        public decimal Price { get; set; }
        public string Game_Image { get; set; }
      
-        public void DecreasePrice(int amountToDecrease)
+        public void DecreasePrice(decimal amountToDecrease)
         {
             Price -= amountToDecrease;
         }
