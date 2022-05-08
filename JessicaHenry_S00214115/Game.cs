@@ -8,12 +8,16 @@ namespace JessicaHenry_S00214115
 {
     public class Game
     {
-       string Name { get; set; }
-       decimal MetacriticScore { get; set; }
-       string Description { get; set; }
-       string Platform { get; set; }
-       decimal Price { get; set; }
-       string Game_Image { get; set; }
-        
+       public string Name { get; set; }
+       public decimal MetacriticScore { get; set; }
+       public string Description { get; set; }
+       public string Platform { get; set; }
+       public decimal Price { get; set; }
+       public string Game_Image { get; set; }
+     
+        public void DecreasePrice(int desc)
+        {
+            Price -= desc;
+        }
     }
 }
