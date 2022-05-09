@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JessicaHenry_S00214115"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="WindowLoaded">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="lbxGames"  Grid.Row="0" 
+                 Grid.RowSpan="2" 
+                 Grid.Column="0"
+                 Margin="5"
+        SelectionChanged="lbxGames_SelectionChanged"
+                />
+
+        <TextBlock Name="tbxGameDetails"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   Margin="5"/>
         
+        <Image Name="ImgGame" 
+               Grid.Column="1" 
+               Grid.Row="1" 
+               Margin="5"/>
+        
+        
+
     </Grid>
 </Window>

@@ -20,9 +20,37 @@ namespace JessicaHenry_S00214115
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Game> allGames; 
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
+        {
+            GameData db = new GameData(); 
+
+            var query = from g in db.Games
+                        orderby g.Name
+                        select g;
+
+            allGames = query.ToList();
+
+            lbxGames.ItemsSource = allGames;
+        }
+
+        private void lbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //determinate what was selected 
+            Game selected = lbxGames.SelectedItem as Game;
+            //check no null
+            if (selected != null)
+            {
+                //update display 
+
+                tbxGameDetails.Text = selected.DisplayDetails();
+                ImgGame.Source = new BitmapImage(new Uri(selected.Game_Image));
+            }
         }
     }
 }

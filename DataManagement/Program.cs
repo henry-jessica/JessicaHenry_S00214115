@@ -44,9 +44,8 @@ namespace DataManagement
                 Console.WriteLine("Games Have been created");
 
                 db.Games.Add(g1);
-                db.Games.Add(g1);
-                db.Games.Add(g1);
-                db.Games.Add(g1);
+                db.Games.Add(g2);
+                db.Games.Add(g3);
 
                 Console.WriteLine("Games have been added to table");
 

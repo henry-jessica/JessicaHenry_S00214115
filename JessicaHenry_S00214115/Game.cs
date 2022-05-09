@@ -26,6 +26,16 @@ namespace JessicaHenry_S00214115
         {
             Price -= amountToDecrease;
         }
+
+        public override string ToString()
+        {
+            return Name; 
+        }
+        public string DisplayDetails()
+        {
+            return $"Name: {Name} \nScore: {MetacriticScore} \nDescription: {Description}\nPlatform: {Platform}\nPrice: {Price}"; 
+        }
+
     }//end of Game class
 
     public class GameData : DbContext
