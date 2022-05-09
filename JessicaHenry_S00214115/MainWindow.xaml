@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Loaded="WindowLoaded">
+    <Window.Resources>
+        <DataTemplate x:Key="lbxTemplate">
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+
+                <Image Source="{Binding Game_Image}"
+                       Width="75"
+                       Margin="5"/>
+                <TextBlock Text="{Binding MetacriticScore}"
+                           Margin="5"
+                           FontSize="24"/>
+
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources> 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -18,7 +33,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Name="lbxGames"  Grid.Row="1" 
+        <ListBox ItemTemplate="{StaticResource ResourceKey=lbxTemplate}"
+            Name="lbxGames"  Grid.Row="1" 
                  Grid.RowSpan="3" 
                  Grid.Column="0"
                  Margin="5"
