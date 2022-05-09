@@ -52,5 +52,29 @@ namespace JessicaHenry_S00214115
                 ImgGame.Source = new BitmapImage(new Uri(selected.Game_Image));
             }
         }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            RadioButton radio = (RadioButton)sender;
+            string platform = radio.Content.ToString();
+
+            switch (platform)
+            {
+                case "PS":
+                    lbxGames.ItemsSource = allGames.Where(g=> g.Platform.Contains("PS"));
+                    break;
+                case "Switch":
+                    lbxGames.ItemsSource = allGames.Where(g => g.Platform.Contains("Switch"));
+                    break;
+                case "Xbox":
+                    lbxGames.ItemsSource = allGames.Where(g => g.Platform.Contains("Xbox"));
+                    break;
+                default:
+                    lbxGames.ItemsSource = allGames; 
+                    break;
+
+
+            }
+        }
     }
 }

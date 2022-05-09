@@ -9,6 +9,7 @@
         Loaded="WindowLoaded">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -17,24 +18,48 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Name="lbxGames"  Grid.Row="0" 
-                 Grid.RowSpan="2" 
+        <ListBox Name="lbxGames"  Grid.Row="1" 
+                 Grid.RowSpan="3" 
                  Grid.Column="0"
                  Margin="5"
-        SelectionChanged="lbxGames_SelectionChanged"
-                />
+        SelectionChanged="lbxGames_SelectionChanged"/>
 
         <TextBlock Name="tbxGameDetails"
                    Grid.Column="1"
-                   Grid.Row="0"
+                   Grid.Row="1"
                    Margin="5"/>
         
         <Image Name="ImgGame" 
                Grid.Column="1" 
-               Grid.Row="1" 
+               Grid.Row="2" 
                Margin="5"/>
-        
-        
+        <StackPanel 
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            
+            <RadioButton Content="PS"
+                         Width="75"
+                         GroupName="Platform"
+                         Click="RadioButton_Click"/>
+            <RadioButton Content="Switch"
+                         Width="75"
+                         GroupName="Platform"
+                         Click="RadioButton_Click"/>
+            <RadioButton Content="Xbox"
+                         Width="75"
+                         GroupName="Platform"
+                         Click="RadioButton_Click"/>
+            <RadioButton Content="All"
+                         Width="75"
+                         GroupName="Platform"
+                         Click="RadioButton_Click"/>
+        </StackPanel>
+   
+
 
     </Grid>
 </Window>
