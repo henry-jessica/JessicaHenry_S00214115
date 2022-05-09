@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace JessicaHenry_S00214115
     public class Game
     {
         //properties 
-        
+       [Key]
        public string Name { get; set; }
        public decimal MetacriticScore { get; set; }
        public string Description { get; set; }
