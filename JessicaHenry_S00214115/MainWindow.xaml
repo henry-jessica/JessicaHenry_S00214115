@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JessicaHenry_S00214115"
         mc:Ignorable="d"
+          Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+  
         Title="MainWindow" Height="450" Width="800"
         Loaded="WindowLoaded">
     <Window.Resources>
